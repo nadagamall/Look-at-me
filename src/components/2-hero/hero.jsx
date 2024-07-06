@@ -38,12 +38,8 @@ const Hero = () => {
                 </p>
 
                 <div className="all-icons flex">
-
-                    <div className="icon icon-youtube-square"></div>
                     <div className="icon icon-instagram1"></div>
                     <div className="icon icon-twitter"></div>
-
-
                 </div>
             </div>
             <div className="right-section animation">

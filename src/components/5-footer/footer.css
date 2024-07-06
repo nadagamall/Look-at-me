@@ -40,5 +40,9 @@ footer.flex p
         flex-direction: column;
         gap: 2rem;
     }
-    
+    footer.flex ul
+    {
+        overflow-wrap: anywhere
+        ;
+    }
 }

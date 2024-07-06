@@ -32,6 +32,10 @@ header ul.flex {
     gap: 16px;
 }
 
+.light header ul.flex {
+    gap: 16px;    
+}
+
 header ul li a:hover {
     color: var(--blue);
     opacity: 0.9;
@@ -46,6 +50,12 @@ header button {
 header button.menu {
     display: none;
 }
+
+.light .fixed .modal li
+{
+    color: #333;
+}
+
 
 /*Icone style*/
 header .icon-menu, header button.mode {
@@ -94,7 +104,7 @@ header .fixed {
     inset: 0;
     z-index: 11;
     background-color: rgba(40, 40, 48, 0.91);
-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
 }
 
 /*animation*/
