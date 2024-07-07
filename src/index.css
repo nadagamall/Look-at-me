@@ -104,6 +104,12 @@ button:active {
 
 }
 
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
 @media (max-width:1000px)
 {
   .container{
