@@ -6,7 +6,7 @@ export const myProject = [
     {projectTitle:"drama",ctegory:"drama",imgPath:"../../../public/65_film_teaser_poster.jpg"},
     {projectTitle:"comedy",ctegory:"comedy",imgPath:"../../../public/luca_poster.jpg"},
     {projectTitle:"comedy",ctegory:"comedy",imgPath:"../../../public/Kingofcomedy.jpg"},
-    {projectTitle:"children",ctegory:"children",imgPath:"../../../public/jjuu.jpg"},
+    {projectTitle:"children",ctegory:"children",imgPath:"/public/jjuu.jpg"},
 
 ]; 
 export const myProject2 =[...myProject];
