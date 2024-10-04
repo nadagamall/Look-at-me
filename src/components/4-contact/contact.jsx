@@ -1,7 +1,7 @@
 import './contact.css';
 import Lottie from "lottie-react";
-import doneAnimation from "../../../public/animation/Animation - 1718304422137.json";
-import contactusAnimation from "../../../public/animation/Animationcontactus-1718305819752.json";
+import doneAnimation from "../../../animation/Animation - 1718304422137.json";
+import contactusAnimation from "../../../Animationcontactus-1718305819752.json";
 import { useForm, ValidationError } from '@formspree/react';
 
 
