@@ -1,7 +1,7 @@
 import React from "react";
 import './hero.css';
 import Lottie from "lottie-react";
-import whatchAnimation from "../../../public/animation/Animationmovies-1718306556863.json";
+import whatchAnimation from "../../assets/animation/Animationmovies-1718306556863.json";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 

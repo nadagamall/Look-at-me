@@ -1,50 +1,50 @@
 // @ts-nocheck
 
-import Footer from './components/5-footer/footer'
-import Contact from './components/4-contact/contact'
-import Main from './components/3-main/main'
-import Hero from './components/2-hero/hero'
-import Header from './components/1-header/header'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import Footer from './components/5-footer/footer';
+import Contact from './components/4-contact/contact';
+import Main from './components/3-main/main';
+import Hero from './components/2-hero/hero';
+import Header from './components/1-header/header';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'; // استيراد أيقونة السهم
 import { useEffect, useState } from 'react';
 
-
-
-
 function App() {
+  const [ShowScrollBTN, setShowScrollBTN] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    const handleScroll = () => {
       if (window.scrollY > 300) {
-        setShowScrollBTN(true)
+        setShowScrollBTN(true);
       } else {
-        setShowScrollBTN(false)
+        setShowScrollBTN(false);
       }
+    };
 
-    });
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll); // تنظيف الحدث عند إزالة المكون
   }, []);
-  const [ ShowScrollBTN, setShowScrollBTN] = useState(false);
+
   return (
-    <div id="up" className='container'>
-
+    <div id="up" className="container">
       <Header />
-      <div className='divider' />
+      <div className="divider" />
       <Hero />
-      <div className='divider' />
+      <div className="divider" />
       <Main />
-      <div className='divider' />
+      <div className="divider" />
       <Contact />
-      <div className='divider' />
+      <div className="divider" />
       <Footer />
-    
-        <a style={{opacity: ShowScrollBTN? 1 : 0, transition:"1s"}} href="#up">
-          <button className='icon-arrow-outline-up scroll2Top'></button>
-        </a>
-    
-    </div>
 
+      {/* زر التمرير إلى الأعلى مع الأيقونة */}
+      <a style={{ opacity: ShowScrollBTN ? 1 : 0, transition: "1s" }} href="#up">
+        <button className="icon-arrow-outline-up scroll2Top">
+          <FontAwesomeIcon icon={faArrowUp} /> {/* إضافة أيقونة السهم */}
+        </button>
+      </a>
+    </div>
   );
 }
 
-export default App
+export default App;

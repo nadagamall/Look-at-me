@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import './header.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'; // استيراد الأيقونات
+
 const Header = () => {
     const [showModal, setshowModal] = useState(false);
     const [theme, setTheme] = useState(localStorage.getItem("currentMode") ?? "dark");
@@ -23,7 +26,9 @@ const Header = () => {
             <button onClick={() => {
                 setshowModal(true)
 
-            }} className="menu icon-menu flex"></button>
+            }} className="menu icon-menu flex">
+
+            </button>
             <div />
 
             <nav>
@@ -45,9 +50,11 @@ const Header = () => {
 
 
             }} className="mode flex">
-                {theme === "dark" ?
-                    (<span className="icon-moon-o"></span>) : (<span className="icon-brightness-up"></span>)}
-
+               {theme === "dark" ? (
+                    <FontAwesomeIcon icon={faMoon} /> // أيقونة القمر
+                ) : (
+                    <FontAwesomeIcon icon={faSun} /> // أيقونة الشمس
+                )}
             </button>
 
             {showModal &&
@@ -83,3 +90,4 @@ const Header = () => {
 }
 
 export default Header;
+
